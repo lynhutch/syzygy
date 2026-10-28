@@ -1,5 +1,7 @@
 @layer reset, base, layout, components, utilities, overrides;
 
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Hairline&family=Saira+Semi+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 @layer reset {
   *,
   *::before,
@@ -15,10 +17,43 @@
 @layer base {
   :root {
     /* Add design tokens here. */
+
+    /* COLORS */
+    --frost-blue: #e4f3f4;
+    --icy-blue: #91c9e2;
+    --medium-blue: #4f81aa;
+    --dark-blue: #143d5b;
+    --midnight: #030b19;
+
+    /* TYPE */
+    --heading-font: "Bungee Hairline", Lucida, Monospace;
+    --body-font: "Saira Semi Condensed", Verdana, sans-serif;
+    --font-weight-bold: 700;
+    --font-size-base: 1rem;
+    --font-size-title: 2rem;
+    --font-size-heading: 1.5rem;
+    --font-size-subheading: 1.25rem;
+
+
+    /* SPACING */
+
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 2rem;
+    --spacing-x-lg: 3rem;
+
+    /* SHAPE */
+
+    --circle-shape: circle(50%);
+
+    /* FOCUS */
+    --focus-color: #91c9e2;
+    --focus-width: 3px;
+    --focus-offset: 2px;
   }
 
   body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Verdana, Helvetica, sans-serif;
     line-height: 1.5;
   }
 
@@ -30,10 +65,27 @@
 
 @layer layout {
   /* Add page-level layout and composition classes here. */
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 @layer components {
   /* Add reusable components such as buttons, cards, callouts, and forms here. */
+
+  button {
+
+  }
+
+  .feature-card {
+
+  }
+
+  form {
+
+  }
 }
 
 @layer utilities {
