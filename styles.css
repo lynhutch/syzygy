@@ -1,4 +1,4 @@
-@layer reset, base, layout, components, utilities, overrides;
+@layer reset, base, layout, components, utilities, state, overrides;
 
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Hairline&family=Saira+Semi+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
@@ -31,7 +31,7 @@
     --font-weight-bold: 700;
     --font-size-base: 1rem;
     --font-size-title: 2rem;
-    --font-size-heading: 1.5rem;
+    --font-size-heading: 1.75rem;
     --font-size-subheading: 1.25rem;
 
 
@@ -61,30 +61,153 @@
   svg {
     max-width: 100%;
   }
+
+    h1, h2, h3 {
+    font-family: var(--heading-font);
+  }
+
+  main p {
+    font-family: var(--body-font);
+    font-size: var(--font-size-base);
+    max-width: 60ch;
+    margin: 0 auto;
+    padding-bottom: var(--spacing-md);
+  }
+
+  h1 {
+    font-size: var(--font-size-title);
+  }
+
+  h2 {
+    font-size: var(--font-size-heading);
+  }
+
+  h3 {
+    font-size: var(--font-size-subheading);
+  }
+
+  footer {
+    background-color: var(--midnight);
+    color: var(--frost-blue);
+    padding: var(--spacing-md) 0;
+    text-align: center;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    background-color: var(--midnight);
+    color: var(--frost-blue);
+  }
+
+  header p a{
+    text-decoration: none;
+    color: inherit;
+    font-size: var(--font-size-heading);
+    font-family: var(--heading-font);
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 @layer layout {
   /* Add page-level layout and composition classes here. */
 
-  nav {
+  .nav-list {
     display: flex;
     justify-content: space-between;
+    list-style: none;
+    gap: var(--spacing-md);
+    font-family: var(--body-font);
   }
+
+  .nav-list a {
+    text-decoration: none;
+    color: var(--frost-blue)
+  }
+
+  .card-container {
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: var(--spacing-md);
+    margin: auto;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: var(--spacing-md) var(--spacing-sm);
+    text-align: center;
+  }
+
 }
 
 @layer components {
   /* Add reusable components such as buttons, cards, callouts, and forms here. */
 
   button {
-
+    background-color: var(--icy-blue);
+    color: var(--dark-blue);
+    padding: var(--spacing-sm);
+    border: none;
+    font-family: var(--body-font);
+    font-weight: var(--font-weight-bold);
   }
 
-  .feature-card {
+  button:focus-visible {
+    outline: var(--focus-width) solid var(--focus-color);
+  }
 
+  button:hover {
+    cursor: pointer;
+  }
+
+  .featured-card {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    margin: auto;
+    padding: var(--spacing-md);
+    background-color: var(--midnight);
+    color: var(--frost-blue);
+    border-radius: 16px;
+  }
+
+  .featured-card h3 {
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 4px var(--frost-blue);
   }
 
   form {
+    display: flex;
+    flex-direction: column;
+    max-width: 45%;
+    margin: auto;
+    text-align: left;
+    line-height: var(--spacing-lg);
+    font-family: var(--body-font);
+  }
 
+  form input, form textarea {
+    font-size: var(--font-size-base);
+    font-family: var(--body-font);
+  }
+
+  button[type="submit"] {
+    max-width: 15%;
+    margin: var(--spacing-sm) auto;
   }
 }
 
@@ -98,6 +221,27 @@
     white-space: nowrap;
     clip-path: inset(50%);
   }
+
+  .mt-btn {
+    margin-top: 12px;
+    width: 10%;
+  }
+
+  .hero-p {
+    margin-top: 12px;
+  }  
+
+  .comment-p {
+    font-size: 1.2rem; /* base font size makes the text feel like it gets lost, make it slightly larger to bring attention and clarity to the form "call-to-action". */
+  }
+}
+
+@layer state {
+
+  .current-page {
+    text-decoration: underline 2px;
+    color: var(--icy-blue);
+    }
 }
 
 @layer overrides {
@@ -106,4 +250,25 @@
 
 @media print {
   /* Add print improvements here. */
+  nav, footer, button {
+    display: none !important;
+  }
+
+  .container {
+    font-size: 12pt;
+    orphans: 3;
+    background: transparent !important;
+    width: 100% !important;
+  }
+
+  img {
+    max-width: 100% !important;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  h1, h2, h3 {
+    page-break-after: avoid;
+    break-after: avoid;
+  }
 }

@@ -11,10 +11,10 @@
 
     <body>
         <header>
-            <a href="#">A Moment of Syzygy</a>
+            <p><a href="#">A Moment of Syzygy</a></p>
             <nav aria-label="Main navigation">
             <ul class="nav-list">
-                <li><a href="#">Home</a></li>
+                <li><a href="#" class="current-page">Home</a></li>
                 <li><a href="introduction.html">Introduction</a></li>
                 <li><a href="topics.html">Topics</a></li>
                 <li><a href="glossary.html">Glossary</a></li>
@@ -24,9 +24,9 @@
         </header>
 
         <main>
-            <section class="hero">
+            <section class="container">
                 <h1>Welcome to A Moment of Syzygy</h1>
-                <p>A Moment of Syzygy is dedicated to helping you learn basic topics
+                <p class="hero-p">A Moment of Syzygy is dedicated to helping you learn basic topics
                 and terms in astronomy. The glossary page will cover terms you might 
                 not find in the mini topic lessons. The practice page will walk you 
                 through how to stargaze from your computer and what to look for to 
@@ -35,28 +35,34 @@
                 </p>
             </section>
 
-            <section class="featured-card">
-                <h2>Brightness</h2>
-                <p>Learn the difference between absolute magnitude and apparent magnitude.</p>
-                <a href="topics.html#brightness"><button>Learn More</button></a>
-            </section>
-                
-            <section class="featured-card">
-                <h2>White Dwarf or Black Hole?</h2>
-                <p>Learn about the potential fates of stars as they near the end of their life cycle.</p>
-                <a href="topics.html#white-dwarf"><button>Learn More</button></a>
-            </section>
-                
-            <section class="featured-card">
-                <h2>The Universe: Age and Models</h2>
-                <p>Learn about the universe's age and the two models that explain its beginnings.</p>
-                <a href="topics.html#universe"><button>Learn More</button></a>
+            <section class="container">
+                <h2>Featured Topics</h2>
+
+                <div class="card-container">
+                    <section class="featured-card">
+                        <h3>Brightness</h3>
+                        <p>Learn the difference between absolute magnitude and apparent magnitude.</p>
+                        <a href="topics.html#brightness"><button>Learn More</button></a>
+                    </section>
+                        
+                    <section class="featured-card">
+                        <h3>White Dwarf or Black Hole?</h3>
+                        <p>Learn about the potential fates of stars as they near the end of their life cycle.</p>
+                        <a href="topics.html#white-dwarf"><button>Learn More</button></a>
+                    </section>
+                        
+                    <section class="featured-card">
+                        <h3>The Universe: Age and Models</h3>
+                        <p>Learn about the universe's age and the two models that explain its beginnings.</p>
+                        <a href="topics.html#universe"><button>Learn More</button></a>
+                    </section>
+                </div>
             </section>
 
-            <section>
+            <section class="container">
                 <h2>Have a Question or Comment?</h2>
-                <p>Let us know below!</p> 
-                <form>
+                <p class="comment-p">Let us know below!</p> 
+                <form id="user-comment">
                     <label for="name">Name</label>
                     <input type="text" id="name" name="name" placeholder="Your name...">
 
@@ -65,10 +71,11 @@
 
                     <label for="comment">Comment</label>
                     <textarea id="comment" name="comment" rows="6" cols="50" placeholder="Type your question or comment here..."></textarea>
-
-                    <input type="submit" value="Submit">
                 </form>
+
+                <button type="submit" form="user-comment" class="mt-btn">Submit</button>
             </section>
+            
         </main>
 
         <footer>
