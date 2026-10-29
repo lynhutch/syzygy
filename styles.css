@@ -44,7 +44,8 @@
 
     /* SHAPE */
 
-    --circle-shape: circle(50%);
+    --dark-bg-shadow: 2px 2px 4px var(--frost-blue);
+    --border-radius: 16px;
 
     /* FOCUS */
     --focus-color: #91c9e2;
@@ -182,12 +183,12 @@
     padding: var(--spacing-md);
     background-color: var(--midnight);
     color: var(--frost-blue);
-    border-radius: 16px;
+    border-radius: var(--border-radius);
   }
 
   .featured-card h3 {
     font-size: 1.5rem;
-    text-shadow: 2px 2px 4px var(--frost-blue);
+    text-shadow: var(--dark-bg-shadow);
   }
 
   form {
