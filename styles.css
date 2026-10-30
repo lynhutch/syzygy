@@ -164,14 +164,6 @@
     font-weight: var(--font-weight-bold);
   }
 
-  button:focus-visible {
-    outline: var(--focus-width) solid var(--focus-color);
-  }
-
-  button:hover {
-    cursor: pointer;
-  }
-
   .featured-card {
     height: 300px;
     display: flex;
@@ -221,6 +213,14 @@
     clip: rect(0 0 0 0);
     white-space: nowrap;
     clip-path: inset(50%);
+  }
+
+  button:focus-visible {
+    outline: var(--focus-width) solid var(--focus-color);
+  }
+
+  button:hover {
+    cursor: pointer;
   }
 
   .mt-btn {
