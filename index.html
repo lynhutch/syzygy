@@ -11,26 +11,26 @@
 
     <body>
         <header>
-            <p><a href="#">A Moment of Syzygy</a></p>
+            <a href="#" class="nav-title">A Moment of Syzygy</a>
             <nav aria-label="Main navigation">
-            <ul class="nav-list">
-                <li><a href="#" class="current-page">Home</a></li>
-                <li><a href="introduction.html">Introduction</a></li>
-                <li><a href="topics.html">Topics</a></li>
-                <li><a href="glossary.html">Glossary</a></li>
-                <li><a href="practice.html">Practice</a></li>
-            </ul>
+                <ul class="nav-list">
+                    <li><a href="#" class="current-page">Home</a></li>
+                    <li><a href="introduction.html">Introduction</a></li>
+                    <li><a href="topics.html">Topics</a></li>
+                    <li><a href="glossary.html">Glossary</a></li>
+                    <li><a href="practice.html">Practice</a></li>
+                </ul>
             </nav>
         </header>
 
         <main>
             <section class="container">
                 <h1>Welcome to A Moment of Syzygy</h1>
-                <p class="hero-p">A Moment of Syzygy is dedicated to helping you learn basic topics
+                <p class="extra-margin">A Moment of Syzygy is dedicated to helping you learn basic topics
                 and terms in astronomy. The glossary page will cover terms you might 
                 not find in the mini topic lessons. The practice page will walk you 
                 through how to stargaze from your computer and what to look for to 
-                deepen your understanding of astronomy. We hope we'll walk away with 
+                deepen your understanding of astronomy. We hope you'll walk away with 
                 a fun fact or two!
                 </p>
             </section>
@@ -42,38 +42,38 @@
                     <section class="featured-card">
                         <h3>Brightness</h3>
                         <p>Learn the difference between absolute magnitude and apparent magnitude.</p>
-                        <a href="topics.html#brightness"><button>Learn More</button></a>
+                        <a href="topics.html#brightness"><button class="button">Learn More</button></a>
                     </section>
                         
                     <section class="featured-card">
                         <h3>White Dwarf or Black Hole?</h3>
                         <p>Learn about the potential fates of stars as they near the end of their life cycle.</p>
-                        <a href="topics.html#white-dwarf"><button>Learn More</button></a>
+                        <a href="topics.html#white-dwarf"><button class="button">Learn More</button></a>
                     </section>
                         
                     <section class="featured-card">
                         <h3>The Universe: Age and Models</h3>
                         <p>Learn about the universe's age and the two models that explain its beginnings.</p>
-                        <a href="topics.html#universe"><button>Learn More</button></a>
+                        <a href="topics.html#universe"><button class="button">Learn More</button></a>
                     </section>
                 </div>
             </section>
 
             <section class="container">
                 <h2>Have a Question or Comment?</h2>
-                <p class="comment-p">Let us know below!</p> 
-                <form id="user-comment">
+                <p class="larger-base-text">Let us know below!</p> 
+                <form id="user-comment" class="comment-form">
                     <label for="name">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your name...">
+                    <input type="text" id="name" name="name" placeholder="Your name..." class="form-field">
 
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Your email...">
+                    <input type="email" id="email" name="email" placeholder="Your email..." class="form-field">
 
                     <label for="comment">Comment</label>
-                    <textarea id="comment" name="comment" rows="6" cols="50" placeholder="Type your question or comment here..."></textarea>
+                    <textarea id="comment" name="comment" rows="6" cols="50" placeholder="Type your question or comment here..." class="form-field"></textarea>
                 </form>
 
-                <button type="submit" form="user-comment" class="mt-btn">Submit</button>
+                <button type="submit" form="user-comment" class="button submit">Submit</button>
             </section>
             
         </main>
